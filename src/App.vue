@@ -1,28 +1,55 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="container">
+      <the-context></the-context>
+      <the-form></the-form>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TheContext from "./components/TheContext.vue";
+import TheForm from "./components/TheForm.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    TheContext,
+    TheForm,
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-image: url("./assets/images/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* margin: 0 auto; */
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
 }
 </style>
