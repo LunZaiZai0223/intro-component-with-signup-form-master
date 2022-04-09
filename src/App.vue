@@ -4,6 +4,17 @@
       <the-context></the-context>
       <the-form></the-form>
     </div>
+    <footer class="info">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/LunZaiZai0223" target="_blank"
+          >LunZaiZai0223</a
+        >.
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -38,10 +49,16 @@ body {
 body {
   font-family: Poppins, sans-serif;
   background-image: url("./assets/images/bg-intro-desktop.png");
+  @media screen and (max-width: 768px) {
+    background-image: url("./assets/images/bg-intro-mobile.png");
+  }
   background-color: hsl(0, 100%, 74%);
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 }
 
 .container {
@@ -51,5 +68,20 @@ body {
   width: 80%;
   margin: 0 auto;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: auto;
+    width: auto;
+    gap: 0px;
+  }
+}
+
+.info {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fdfdfd;
+  font-size: 0.75rem;
 }
 </style>

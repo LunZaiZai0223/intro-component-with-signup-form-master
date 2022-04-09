@@ -20,6 +20,11 @@ export default {
 section {
   width: 50%;
   color: White;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    text-align: center;
+    margin: 5rem 0;
+  }
 }
 
 h1 {
